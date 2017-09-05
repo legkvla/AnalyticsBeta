@@ -14,14 +14,14 @@
         </startEvent>
 
         <serviceTask completionQuantity="1" id="demoAdder"
-                     isForCompensation="false" name="594e799d-b0b0-4172-8409-8d86589ae7bc::My analytic::v1" startQuantity="1"
+                     isForCompensation="false" name="<Analytic Id TimeseriesAdder>::<Analytic Name>::<Analytic Version>" startQuantity="1"
                      activiti:delegateExpression="${javaDelegate}"
                      xmlns:activiti="http://activiti.org/bpmn">
             <incoming>start-to-demoAdder</incoming>
             <outgoing>demoAdder-to-minersRule</outgoing>
         </serviceTask>
         <serviceTask completionQuantity="1" id="minersRule"
-                     isForCompensation="false" name="253c98ce-1bb0-486d-a5ea-5b918dd08c7e::My analytic miner Rule::v1" startQuantity="1"
+                     isForCompensation="false" name="<Analytic Id MinersRule>::<Analytic Name>::<Analytic Version>" startQuantity="1"
                      activiti:delegateExpression="${javaDelegate}"
                      xmlns:activiti="http://activiti.org/bpmn">
             <incoming>demoAdder-to-minersRule</incoming>
