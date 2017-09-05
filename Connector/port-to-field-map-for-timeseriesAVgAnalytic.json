@@ -1,0 +1,98 @@
+{
+  "analyticName": "My analytic",
+  "analyticVersion": "v1",
+  "orchestrationStepId": "demoTimeseriesAdder",
+  "iterations": [
+    {
+      "inputMaps": [
+        {
+          "valueSourceType": "DATA_CONNECTOR",
+          "fullyQualifiedPortName": "data.time_series.numberArray1",
+          "fieldId": "KW",
+          "queryCriteria": {
+            "columns": [
+              "recorded_at",
+              "data_value"
+            ],
+            "table": "sensor_data",
+            "conditions": [
+              {
+                "key": "asset_id",
+                "value": "${ASSET_ID}",
+                "valueType": "string",
+                "relation": " = "
+              },
+              {
+                "key": "recorded_at",
+                "value": "current_timestamp",
+                "valueType": "none",
+                "relation": " < "
+              },
+              {
+                "key": "field_id",
+                "value": "KW",
+                "valueType": "string",
+                "relation": " = "
+              }
+            ]
+          },
+          "engUnit": "kw",
+          "required": true,
+          "dataSourceId": "Postgres Reference External Data Connector"
+        },
+        {
+          "valueSourceType": "DATA_CONNECTOR",
+          "fullyQualifiedPortName": "data.time_series.numberArray2",
+          "fieldId": "vibration",
+          "queryCriteria": {
+            "columns": [
+              "recorded_at",
+              "data_value"
+            ],
+            "table": "sensor_data",
+            "conditions": [
+              {
+                "key": "asset_id",
+                "value": "${ASSET_ID}",
+                "valueType": "string",
+                "relation": " = "
+              },
+              {
+                "key": "recorded_at",
+                "value": "current_timestamp",
+                "valueType": "none",
+                "relation": " < "
+              },
+              {
+                "key": "field_id",
+                "value": "vibration",
+                "valueType": "string",
+                "relation": " = "
+              }
+            ]
+          },
+          "engUnit": "hertz",
+          "required": true,
+          "dataSourceId": "Postgres Reference External Data Connector"
+        }
+      ],
+      "outputMaps": [
+        {
+          "fullyQualifiedPortName": "data.time_series.sum",
+          "fieldId": "bearing temperature prince",
+          "engUnit": "Celsius",
+          "dataSourceId": "Postgres Reference External Data Connector",
+          "queryCriteria": {
+
+            "columns": [
+              "field_id",
+              "recorded_at",
+              "data_value"
+            ],
+            "table": "sensor_data"
+          }
+        }
+      ]
+    }
+  ]
+}

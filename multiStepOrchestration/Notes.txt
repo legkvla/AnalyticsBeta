@@ -1,0 +1,3 @@
+//tagMapQuery
+
+https://predix-asset.run.aws-usw02-pr.ice.predix.io/assets?filter=classification=/classifications/timeseries_tag:asset_id=/assets/minersRuleOrch38-UUID&fields=name,timeseries_tag_id
