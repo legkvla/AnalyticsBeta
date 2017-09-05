@@ -1,0 +1,16 @@
+---
+# yml for custom data connector
+applications:
+  - name: <yourname>-dataconnector
+    buildpack: https://github.com/cloudfoundry/java-buildpack.git#v3.14
+    path: postgresdb-ref-impl-data-connector-1.5.0-SNAPSHOT.jar
+    memory: 3G
+    timeout: 180
+    services:
+      - student1-db
+    env:
+      uaa_client_id: prince-client
+      uaa_client_secret: secret
+      uaa_check_token_url: https://<uaa_url>/check_token
+      SPRING_PROFILES_ACTIVE: cloud
+      MEMORY_LIMIT: 2G
