@@ -1,0 +1,12 @@
+URL:Postgres: https://prince-pg-studio.run.aws-usw02-pr.ice.predix.io
+
+ConnectorURL :
+
+URL: 
+
+https://student15-dataconnectors.run.aws-usw02-pr.ice.predix.io/api/v1/analytics/customdata/healthcheck
+
+
+https://student15-dataconnectors.run.aws-usw02-pr.ice.predix.io/api/v1/analytics/customdata/read
+
+https://student15-dataconnectors.run.aws-usw02-pr.ice.predix.io/api/v1/analytics/customdata/write
