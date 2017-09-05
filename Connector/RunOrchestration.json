@@ -1,0 +1,20 @@
+{
+    "orchestrationConfigurationId": "<Orchestration Configuration Id>",
+    "assetId": null,
+    "assetDataFieldsMap": null,
+    "assetGroup": {
+        "dataSourceId": "PredixAsset",
+        "assetSelectionFilter": "/assets?filter=classification=/classifications/turbine:name=15sl-46606c64-619d-4db0-a059-bc2d879640ca<turbine_type"
+    },
+    "modelGroupKey": null,
+    "dataSource": [
+        {
+            "dataSourceId": "Postgres Reference External Data Connector",
+            "apiVersion": "v1",
+            "baseUri": "<dataConnectorUri"
+        }
+    ],
+    "customAttributes": {
+        "IS_GENERIC_SCHEMA": "TRUE"
+    }
+}
