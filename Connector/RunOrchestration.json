@@ -1,6 +1,6 @@
 {
     "orchestrationConfigurationId": "<Orchestration Configuration Id>",
-    "assetId": null,
+    "assetId": "ASSET1",
     "assetDataFieldsMap": null,
     "assetGroup": {
         "dataSourceId": "PredixAsset",
